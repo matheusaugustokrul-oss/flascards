@@ -41,13 +41,14 @@ main h2 {
 .container-cartoes {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-/* Tamanho estendido para caber tag + imagem + texto */
+/* Tamanho estendido do cartão */
 .cartao {
-  width: 270px;
+  width: 280px;
   height: 400px;
   perspective: 1000px;
 }
@@ -61,19 +62,22 @@ main h2 {
   cursor: pointer;
 }
 
-/* Efeito de rotação 3D */
+/* Animação de virar o cartão */
 .cartao:hover .cartao-interno {
   transform: rotateY(180deg);
 }
 
-.cartao-frente, .cartao-verso {
+.cartao-frente, 
+.cartao-verso {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 16px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -86,16 +90,17 @@ main h2 {
   background-color: #f8fafc;
 }
 
-/* object-fit: contain exibe a imagem completa sem cortes */
+/* Imagem completa sem cortes */
 .cartao-imagem {
   width: 100%;
-  height: 170px;
+  height: 180px;
   object-fit: contain;
   background-color: #f1f5f9;
   border-radius: 8px;
   padding: 5px;
 }
 
+/* Tags de Mito e Verdade */
 .tag {
   font-size: 0.8rem;
   font-weight: bold;
@@ -118,6 +123,7 @@ main h2 {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #334155;
+  margin-top: 8px;
 }
 
 footer {
