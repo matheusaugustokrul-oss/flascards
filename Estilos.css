@@ -1,4 +1,83 @@
-*{
-    margin:0;
-    padding: 0; 
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  text-align: center;
+}
+
+.cabecalho {
+  background-color: #1e293b;
+  color: white;
+  padding: 1rem;
+}
+
+.cabecalho nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* Container do Cartão */
+.cartao {
+  width: 300px;
+  height: 400px;
+  margin: 20px auto;
+  perspective: 1000px; /* Efeito 3D para o giro */
+}
+
+.cartao-interno {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Efeito de virar ao passar o mouse */
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+.cartao-frente, .cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartao-verso {
+  transform: rotateY(180deg);
+  background-color: #e2e8f0;
+}
+
+.cartao-imagem {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #1e293b;
+  color: white;
 }
