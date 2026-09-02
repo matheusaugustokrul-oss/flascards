@@ -46,8 +46,8 @@ main h2 {
 }
 
 .cartao {
-  width: 260px;
-  height: 380px;
+  width: 270px;
+  height: 400px;
   perspective: 1000px;
 }
 
@@ -84,10 +84,9 @@ main h2 {
   background-color: #f8fafc;
 }
 
-/* object-fit: contain garante que a imagem apareça completa sem cortar */
 .cartao-imagem {
   width: 100%;
-  height: 180px;
+  height: 170px;
   object-fit: contain;
   background-color: #f1f5f9;
   border-radius: 8px;
@@ -112,11 +111,10 @@ main h2 {
   color: #16a34a;
 }
 
-.cartao-verso p {
+.cartao p {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #334155;
-  margin-top: 10px;
 }
 
 footer {
