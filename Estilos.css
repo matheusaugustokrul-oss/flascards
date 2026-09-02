@@ -33,7 +33,7 @@ main {
 }
 
 main h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #475569;
   margin-bottom: 2rem;
 }
@@ -41,14 +41,14 @@ main h2 {
 .container-cartoes {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
+/* Tamanho estendido para caber tag + imagem + texto */
 .cartao {
-  width: 280px;
-  height: 380px;
+  width: 270px;
+  height: 400px;
   perspective: 1000px;
 }
 
@@ -56,26 +56,24 @@ main h2 {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
   cursor: pointer;
 }
 
+/* Efeito de rotação 3D */
 .cartao:hover .cartao-interno {
   transform: rotateY(180deg);
 }
 
-.cartao-frente, 
-.cartao-verso {
+.cartao-frente, .cartao-verso {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -88,28 +86,22 @@ main h2 {
   background-color: #f8fafc;
 }
 
-.box-imagem {
+/* object-fit: contain exibe a imagem completa sem cortes */
+.cartao-imagem {
   width: 100%;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 170px;
+  object-fit: contain;
   background-color: #f1f5f9;
   border-radius: 8px;
-  overflow: hidden;
-}
-
-.cartao-imagem {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  padding: 5px;
 }
 
 .tag {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 4px 12px;
-  border-radius: 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
 }
 
 .tag.mito {
@@ -123,16 +115,15 @@ main h2 {
 }
 
 .cartao p {
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-size: 0.95rem;
+  line-height: 1.4;
   color: #334155;
-  margin-top: 8px;
 }
 
 footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1rem;
   background-color: #0f172a;
   color: #94a3b8;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
