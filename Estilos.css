@@ -45,6 +45,7 @@ main h2 {
   flex-wrap: wrap;
 }
 
+/* Tamanho estendido para caber tag + imagem + texto */
 .cartao {
   width: 270px;
   height: 400px;
@@ -60,6 +61,7 @@ main h2 {
   cursor: pointer;
 }
 
+/* Efeito de rotação 3D */
 .cartao:hover .cartao-interno {
   transform: rotateY(180deg);
 }
@@ -84,6 +86,7 @@ main h2 {
   background-color: #f8fafc;
 }
 
+/* object-fit: contain exibe a imagem completa sem cortes */
 .cartao-imagem {
   width: 100%;
   height: 170px;
