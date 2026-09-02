@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f4f8;
   color: #333;
   text-align: center;
@@ -14,12 +14,12 @@ body {
 .cabecalho {
   background-color: #0f172a;
   color: #ffffff;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .cabecalho h1 {
   font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .cabecalho nav a {
@@ -38,7 +38,6 @@ main h2 {
   margin-bottom: 2rem;
 }
 
-/* Área onde os cartões ficam lado a lado */
 .container-cartoes {
   display: flex;
   justify-content: center;
@@ -47,7 +46,6 @@ main h2 {
   flex-wrap: wrap;
 }
 
-/* Estrutura do Cartão */
 .cartao {
   width: 280px;
   height: 380px;
@@ -90,7 +88,6 @@ main h2 {
   background-color: #f8fafc;
 }
 
-/* Envolto da imagem para dar o tamanho correto */
 .box-imagem {
   width: 100%;
   height: 180px;
@@ -108,7 +105,6 @@ main h2 {
   object-fit: contain;
 }
 
-/* Tags de Mito e Verdade */
 .tag {
   font-size: 0.75rem;
   font-weight: bold;
